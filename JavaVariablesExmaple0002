@@ -1,0 +1,80 @@
+Example0002(already posted in https://javaktm.blogspot.com)
+========
+Using Point - (It is to store x and y coordinates of a point)
+This is example of a basic java program which shows structure of the program. It is basic java program showing different type of Java variables.
+Primitive types: Integer, float, double, Boolean are shown
+Creating an object.
+Reference types and methods to that object.
+How to print output in a screen is shown using System Class
+This example is same as Example1 but with added Class Point
+
+
+package com.swprogramdeveloper;
+
+import java.awt.*;
+import java.util.Date;
+
+public class Main {
+
+    public static void main(String[] args) {
+        // write your code here
+        //variable types double and integer
+        double age = 30;
+        int herage = (int) age + 20;
+        //Printing output using System Class
+        System.out.println("Hello World "+age + "---" + herage);
+
+        //float type. Note the F- it is required as the compiler will take double as default and will show error if 'F' not given
+        float viewCount= 567.23F;
+        System.out.println("Float variable : " + viewCount);
+
+        //We create a new object of Class Date using keyword 'new'
+        //Object is an instance of a Class
+        Date newDate1 = new Date();
+        //Class will have methods, which all objects can use as per the purpose of the method
+        //Date is Reference type variable and required toString method to get string to be able to print content
+        System.out.println("Current Time : " + newDate1.toString());
+        System.out.println("Current Time Directly : " + newDate1);
+
+        //String is also of type Reference, but no need to create object by 'new' keyword, we can directly initialize
+        String message1 = new String();
+        message1 = "Hello BRO!";
+        System.out.println("String : " + message1);
+        //We can use many available methods of a Class
+        Boolean result1 = message1.endsWith("O!");
+        System.out.println("Does it contain a string ? " + result1);
+        int result2 = message1.length();
+        System.out.println("Length of string : \"" + message1 + "\" is :" + result2);
+        System.out.println("All sent to upper case for string : \"" + message1 +"\" is : " + message1.toUpperCase() );
+
+        //Pointers - reference type variable - with two variable x and y coordinate
+        Point point1 = new Point();
+        Point point2 = new Point();
+        point2=point1;
+		//Initializing Data
+		//Since both points to same location, initializing of any one will be reflected in both points.
+        point1.x=29;
+        point2.y=85;
+        //Both point1 and point2 are pointing to same data. 
+        System.out.println("Point1 = " + point1);
+        System.out.println("Point2 = " + point2);
+
+    }
+}
+
+		
+Output0002
+=======
+"D:\Program Files\Java\jdk-14\bin\java.exe" "-javaagent:D:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2019.3.4\lib\idea_rt.jar=64807:D:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2019.3.4\bin" -Dfile.encoding=UTF-8 -classpath "D:\amar in d\java projects\javaexamples\out\production\javaexamples" com.swprogramdeveloper.Main
+Hello World 30.0---50
+Float variable : 567.23
+Current Time : Sat Apr 18 19:34:45 NPT 2020
+Current Time Directly : Sat Apr 18 19:34:45 NPT 2020
+String : Hello BRO!
+Does it contain a string ? true
+Length of string : "Hello BRO!" is :10
+All sent to upper case for string : "Hello BRO!" is : HELLO BRO!
+Point1 = java.awt.Point[x=29,y=85]
+Point2 = java.awt.Point[x=29,y=85]
+
+Process finished with exit code 0
