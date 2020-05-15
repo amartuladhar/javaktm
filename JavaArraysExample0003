@@ -1,0 +1,79 @@
+Example0003(posted at javaktm.blogspot.com)
+===========
+Description:
+In this example we learn to create Arrays in different 
+We will also see lots of methods like sort, length.
+We will see how to initialize data in the array.
+We will see how to display content of single dimesion and multidimensional arrays.
+
+
+//Arrays
+
+package com.swprogramdeveloper;
+
+import java.awt.*;
+import java.util.Arrays;
+import java.util.Date;
+
+public class Main {
+
+    public static void main(String[] args) {
+	// write your code here
+    //Arrays
+    int[] numbers1 = new int[5];
+    numbers1[0] = 5;
+    numbers1[3] = 9;
+        System.out.println("Address where valuese of numbers1 array stored : " +  numbers1);
+        System.out.println("Size of Array numbers1 : " + numbers1.length);
+        System.out.println("Content of Array numbers1 : " + Arrays.toString(numbers1));
+        System.out.println("Content of certain member of Array : " + numbers1[3]);
+        
+		// sorting content
+        Arrays.sort(numbers1);
+        System.out.println("Content of Array numbers1 - Sorted : " + Arrays.toString(numbers1));
+        
+		// Initializing array in easier way
+        int[] numbers2 = {2,6,9,1,3,0,9};
+        System.out.println("Content of array numbers2 : " + Arrays.toString(numbers2));
+        
+		// Multidimensional array
+        //any dimension we declare as int [][] - 2 box brackets
+        int [][] numbers3 = {{1,2,3},{3,5,6}};
+        System.out.println("Address of 2-dimensional Array" + Arrays.toString(numbers3));
+        
+		int [][] numbers4 = {{1,2,3},{3,5,6},{0,3,4}};
+        System.out.println("Address of 3-dimensional Array" + Arrays.toString(numbers4));
+        System.out.println("Content of 3-dimensional Array" + Arrays.deepToString(numbers4));
+        
+		int [][] numbers5 ={{1,2,3},{1,2},{3,4}};
+        System.out.println("Address of 3-dimensional Array- separate initialization" + Arrays.toString(numbers5));
+        System.out.println("Address of 3-dimensional Array- separate initialization" + Arrays.deepToString(numbers5));
+        
+		int [][][] numbers6 = new int [3][2][4];
+        numbers6[0][0][1]= 1;
+        numbers6[0][1][0]=10;
+        numbers6[2][0][0] = 300;
+        System.out.println("Address of 3-dimensional Array- separate initialization" + Arrays.toString(numbers6));
+        System.out.println("Address of 3-dimensional Array- separate initialization" + Arrays.deepToString(numbers6));
+    }
+}
+
+
+Output0003
+==========
+"D:\Program Files\Java\jdk-14\bin\java.exe" "-javaagent:D:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2019.3.4\lib\idea_rt.jar=53895:D:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2019.3.4\bin" -Dfile.encoding=UTF-8 -classpath "D:\amar in d\java projects\out\production\untitled104" com.swprogramdeveloper.Main
+Address where valuese of numbers1 array stored : [I@10f87f48
+Size of Array numbers1 : 5
+Content of Array numbers1 : [5, 0, 0, 9, 0]
+Content of certain member of Array : 9
+Content of Array numbers1 - Sorted : [0, 0, 0, 5, 9]
+Content of array numbers2 : [2, 6, 9, 1, 3, 0, 9]
+Address of 2-dimensional Array[[I@5b6f7412, [I@27973e9b]
+Address of 3-dimensional Array[[I@312b1dae, [I@7530d0a, [I@27bc2616]
+Content of 3-dimensional Array[[1, 2, 3], [3, 5, 6], [0, 3, 4]]
+Address of 3-dimensional Array- separate initialization[[I@506e1b77, [I@4fca772d, [I@9807454]
+Address of 3-dimensional Array- separate initialization[[1, 2, 3], [1, 2], [3, 4]]
+Address of 3-dimensional Array- separate initialization[[[I@1ddc4ec2, [[I@133314b, [[I@b1bc7ed]
+Address of 3-dimensional Array- separate initialization[[[0, 1, 0, 0], [10, 0, 0, 0]], [[0, 0, 0, 0], [0, 0, 0, 0]], [[300, 0, 0, 0], [0, 0, 0, 0]]]
+
+Process finished with exit code 0
